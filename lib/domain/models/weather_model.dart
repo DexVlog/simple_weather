@@ -7,3 +7,6 @@ class WeatherModel {
   final double temperature;
   final String city;
 }
+
+/* widget WeatherModel dostarcza nam dwie stałe 
+bedące odzwierciedleniem sprawdzanego miasta i temperaturą w nim */

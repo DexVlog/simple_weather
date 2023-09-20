@@ -15,6 +15,7 @@ class HomeCubit extends Cubit<HomeState> {
   }) async {
     emit(const HomeState(status: Status.loading));
     try {
+      /*wowołanie call'a w repository */
       final weatherModel = await _weatherRepository.getWeatherModel(city: city);
       emit(
         HomeState(

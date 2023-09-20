@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
       create: (context) => HomeCubit(
         WeatherRepository(),
       ),
+      //nasłuchiwanie errorów na snackbarze
       child: BlocListener<HomeCubit, HomeState>(
         listener: (context, state) {
           if (state.status == Status.error) {
@@ -47,7 +48,7 @@ class HomePage extends StatelessWidget {
                         _DisplayWeatherWidget(
                           weatherModel: weatherModel,
                         ),
-                      _SearchWidget(),
+                      _SearchWidget(), //textField i elevatedbutton
                     ],
                   );
                 }),
