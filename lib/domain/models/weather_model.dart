@@ -6,6 +6,10 @@ class WeatherModel {
 
   final double temperature;
   final String city;
+
+  WeatherModel.fromJson(Map<String, dynamic> json)
+      : temperature = json['current']['temp_c'] + 0.0,
+        city = json['location']['name'];
 }
 
 /* widget WeatherModel dostarcza nam dwie stałe 
